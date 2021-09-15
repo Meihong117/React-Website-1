@@ -88,7 +88,6 @@ const Arrow=styled(IoMdArrowRoundForward)`
 margin-left: 0.5rem;
 `;
 
-
 const arrowButtons=css`
 width:50px;
 height: 50px;
@@ -104,7 +103,6 @@ transition: 0.3s;
 &:hover{
     background: #cd853f;
     transform: scale(1.05);
-
 }
 `;
 
@@ -122,8 +120,7 @@ ${arrowButtons}
 
 const NextArrow=styled(IoArrowForward)`${arrowButtons}`;
 
-
-
+// ======================================================================================
 const Hero = ({slides}) => {
     const [current, setCurrent]=useState(0)
     const length=slides.length
@@ -135,14 +132,14 @@ const Hero = ({slides}) => {
     const prevSlide=()=>{
         setCurrent(current===0? length-1:current-1)
     }
-
+ 
     return (
         <HeroSection>
             <HeroWrapper>
                 {slides.map((slide,index)=>{
                     return(
                         <HeroSlide key={index}>
-                            {/* img changes with arrow */}
+                            {/* img changes with arrow, index=0,1,2,3 */}
                             {index===current&& (<HeroSlider>
                                 <HeroImage src={slide.image} alt={slide.alt} />
                                 <HeroContent>
@@ -153,7 +150,6 @@ const Hero = ({slides}) => {
                                     </Button>
                                 </HeroContent>
                             </HeroSlider>)}
-                            
                         </HeroSlide>
                     )
                 })}

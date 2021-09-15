@@ -3,19 +3,18 @@ import styled,{css} from 'styled-components/macro'
 import {Link} from 'react-router-dom'
 import { menuData } from '../data/MenuData'
 import { Button } from './Button'
-// import bars from '../images/bars.svg'
 import {FaBars} from 'react-icons/fa'
 
 const Nav=styled.nav`
 height:60px;
 width: 100%;
-
 display:flex;
 justify-content: space-between;
 padding:1rem 2rem;
 z-index: 100;
 position: fixed;
 `;
+
 const NavLink=css`
 color:#fff;
 display:flex;
@@ -83,8 +82,6 @@ const NavBar = () => {
             <NavBtn>
                 <Button to='/content' primary='true'>Contact Us</Button>
             </NavBtn>
-            
-            
         </Nav>
     )
 }
