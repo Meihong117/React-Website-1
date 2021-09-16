@@ -16,7 +16,7 @@ position: fixed;
 `;
 
 const NavLink=css`
-color:#fff;
+color:darkgrey;
 display:flex;
 align-items:center;
 padding: 0 1rem;
@@ -69,11 +69,11 @@ const NavBtn=styled.div`
 `;
 
 
-const NavBar = () => {
+const NavBar = ({toggle}) => {
     return (
         <Nav>
             <Logo to='/'>LOGO</Logo>
-            <MenuBars />
+            <MenuBars onClick={toggle}/>
             <NavMenu>
                 {menuData.map((item,index)=>(
                     <NavMenuLinks to={item.link} key={index} >{item.title}</NavMenuLinks>
