@@ -28,10 +28,11 @@ background: transparent;
 font-size: 2rem;
 cursor: pointer;
 outline: none;
+
 `;
 
 const CloseIcon=styled(FaTimes)`
-color: #000d1a;
+color: #fff;
 `;
 
 const DropdownWrapper=styled.div``;

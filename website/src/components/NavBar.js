@@ -13,6 +13,7 @@ justify-content: space-between;
 padding:1rem 2rem;
 z-index: 100;
 position: fixed;
+background-color: #010101;
 `;
 
 const NavLink=css`
@@ -32,6 +33,7 @@ font-style: italic;
 
 const MenuBars=styled(FaBars)`
 display:none;
+color: #fff;
 
 @media screen and (max-width:768px){
     display: block;
