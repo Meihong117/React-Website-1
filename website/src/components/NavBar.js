@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled,{css} from 'styled-components/macro'
 import {Link} from 'react-router-dom'
 import { menuData } from '../data/MenuData'
@@ -76,9 +76,9 @@ const NavBar = ({toggle}) => {
         <Nav>
             <Logo to='/'>LOGO</Logo>
             <MenuBars onClick={toggle}/>
-            <NavMenu>
+            <NavMenu >
                 {menuData.map((item,index)=>(
-                    <NavMenuLinks to={item.link} key={index} >{item.title}</NavMenuLinks>
+                    <NavMenuLinks to={item.path} key={index} >{item.title} {item.icon}</NavMenuLinks>
                 ))}
             </NavMenu>
             <NavBtn>

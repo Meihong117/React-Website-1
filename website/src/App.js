@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Dropdown from './components/Dropdown';
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
@@ -16,13 +17,13 @@ function App() {
   }
 
   return (
-    <>
-    <GlobalStyle />
-    <NavBar toggle={toggle}/>
-    <Dropdown isOpen={isOpen} toggle={toggle}/>
-    <Hero slides={SliderData}/>
-    <InfoSection {...InfoData}/>
-    </>
+    <BrowserRouter>
+      <GlobalStyle />
+      <NavBar toggle={toggle}/>
+      <Dropdown isOpen={isOpen} toggle={toggle}/>
+      <Hero slides={SliderData}/>
+      <InfoSection {...InfoData}/>
+    </BrowserRouter>
   );
 }
 

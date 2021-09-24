@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { menuData } from '../data/MenuData'
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import SubMenu from './SubMenu';
 
 
 const DropdownContainer=styled.div`
@@ -73,15 +74,15 @@ justify-content: center;
 const Dropdown = ({isOpen, toggle}) => {
     return (
         <div>
-            <DropdownContainer isOpen={isOpen} onClick={toggle}>
+            <DropdownContainer isOpen={isOpen} >
                 <Icon onClick={toggle}>
                     <CloseIcon />
                 </Icon>
                 <DropdownWrapper>
                     <DropdownMenu>
-                        {menuData.map((item,index)=>(
-                            <DropdownLink to={item.link} key={index}>{item.title}</DropdownLink>
-                        ))}
+                        {menuData.map((item,index)=>{
+                            return <SubMenu item={item} key={index} />
+                        })}
                     </DropdownMenu>
                     <BtnWrap>
                         <Button primary='true' round='true' big='true' to='/content'>Contact Us</Button>
