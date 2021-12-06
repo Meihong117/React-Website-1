@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
-import styled,{css} from 'styled-components/macro'
+// import styled, { css } from 'styled-components/macro'
+import styled, { css } from 'styled-components'
 import { Button } from './Button'
 import {IoMdArrowRoundForward} from 'react-icons/io'
 import {IoArrowForward, IoArrowBack} from 'react-icons/io5'
@@ -9,7 +10,7 @@ const HeroSection=styled.section`
 height: 100vh;
 max-height: 1100px;
 position: relative;
-oveflow: hidden;
+/* oveflow: hidden; */
 `
 const HeroWrapper=styled.div`
 width:100%;
