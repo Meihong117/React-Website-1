@@ -11,12 +11,12 @@ const TestAPI = () => {
     const [data,setData]=useState('')
     useEffect(()=>{
     (async function(){
-        const {body}=await(await (await fetch('/api')).json())
-        setData(body)
+        const {text}=await ( await fetch('/api')).json()
+        setData(text)
     })()
     })
     return (
-        <TestContainer>{data}
+        <TestContainer>Here is the data from api: {data}
             
         </TestContainer>
     )
