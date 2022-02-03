@@ -42,10 +42,10 @@ const DropdownMenu=styled.div`
 display: grid;
 grid-template-columns: 1fr;
 grid-template-rows: repeat(4, 80px);
-text-align-center;
+text-align:center;
 margin-bottom: 4rem;
 
-@media and screen (max-width: 480px){
+@media screen and (max-width: 480px){
     grid-template-rows: repeat(4, 60px);
 }
 `;
