@@ -1,5 +1,6 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import styled from 'styled-components'
+
 
 const TestContainer=styled.div` 
   background-color: lightblue;
@@ -7,8 +8,15 @@ const TestContainer=styled.div`
 `
 
 const TestAPI = () => {
+    const [data,setData]=useState('')
+    useEffect(()=>{
+    (async function(){
+        const {body}=await(await (await fetch('/api')).json())
+        setData(body)
+    })()
+    })
     return (
-        <TestContainer>Test api
+        <TestContainer>{data}
             
         </TestContainer>
     )
