@@ -9,15 +9,9 @@ const TestContainer=styled.div`
   height: 300px;
 `
 
-const InputId=styled.input`
-
-`
-const SearchId=styled.button`
-
-`
-const OutputName=styled.h3`
-
-`
+const InputId=styled.input``
+const SearchId=styled.button``
+const OutputName=styled.h3``
 const TestAPI = () => {
     // /////
     const [inputValue, setInputValue] = useState('')
