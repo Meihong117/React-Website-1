@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Dropdown from './components/Dropdown';
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
@@ -24,7 +25,9 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData}/>
       <InfoSection {...InfoData}/>
-      <TestAPI/>
+      
+      <TestAPI />
+        
     </BrowserRouter>
   );
 }
