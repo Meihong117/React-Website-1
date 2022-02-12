@@ -8,7 +8,7 @@ const TestApi2 = (props) => {
     const [user,setUser]=useState([])
 
     useEffect(()=>{
-        fetch('https://travel-functionapp.azurewebsites.net/api/user/'+id)
+        fetch('https://connectionfunc1.azurewebsites.net/api/details')
         .then(res=>res.text() )
         .then(
             (data)=>{
