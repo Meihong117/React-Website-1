@@ -4,12 +4,10 @@ import Dropdown from './components/Dropdown';
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
 import NavBar from './components/NavBar';
-import TestAPI from './components/TestAPI';
-import TestApi2 from './components/TestApi2';
 import { InfoData } from './data/InfoData';
 import { SliderData } from './data/SliderData';
 import GlobalStyle from './globalStyle';
-import GetAllUser from './components/GetAllUser'
+
 
 function App() {
   const [isOpen,setIsOpen]=useState(false)
@@ -25,13 +23,7 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Hero slides={SliderData}/>
       <InfoSection {...InfoData}/>
-      
-      {/* <TestAPI /> */}
-      {/* <Route path="/user" component={GetAllUser}/>
-
-      <Route path="/user/:id" component={TestApi2}/> */}
-      
-        
+    
     </Router>
   );
 }
